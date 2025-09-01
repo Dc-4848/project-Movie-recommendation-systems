@@ -1,0 +1,50 @@
+# 🎬 Movie Recommendation System - Content-Based Filtering
+
+This project is a **Content-Based Movie Recommendation System** that recommends movies based on metadata such as genres, cast, director, tagline, and keywords. It uses **TF-IDF Vectorization** and **Cosine Similarity** to find similar movies based on user input.
+
+---
+
+## 🚀 Project Overview
+
+Content-based recommender systems suggest similar items to a user based on a particular item. In this case, the system takes a movie title as input and recommends similar movies using the textual content of that movie’s metadata.
+
+---
+
+## 🧠 Key Features
+
+- 📄 Processes and cleans movie metadata
+- 🔍 Uses **TF-IDF (Term Frequency-Inverse Document Frequency)** to convert text to numerical features
+- 📏 Calculates **Cosine Similarity** between movies
+- 🔁 Recommends top 30 similar movies to the one entered by the user
+- 🧰 Handles missing values and combines multiple features for better accuracy
+
+---
+
+## 📂 Dataset Used
+
+- **Name**: [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- **Source**: Kaggle / The Movie Database (TMDB)
+- **File**: `movies.csv`
+- **Shape**: 4803 rows × 24 columns
+
+> Dataset contains metadata like genres, cast, director, keywords, overview, popularity, budget, etc.
+
+---
+
+## 🛠️ Technologies & Libraries
+
+- **Python**
+- **NumPy**
+- **Pandas**
+- **Scikit-learn**
+  - `TfidfVectorizer`
+  - `cosine_similarity`
+- **difflib** for close matches
+
+---
+
+## 📈 How It Works
+
+### 1. Load the Dataset
+```python
+data = pd.read_csv("movies.csv")
