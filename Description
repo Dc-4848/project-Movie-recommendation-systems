@@ -1,50 +1,36 @@
-# 🎬 Movie Recommendation System - Content-Based Filtering
+# movie_description.py
 
-This project is a **Content-Based Movie Recommendation System** that recommends movies based on metadata such as genres, cast, director, tagline, and keywords. It uses **TF-IDF Vectorization** and **Cosine Similarity** to find similar movies based on user input.
+def show_project_description():
+    description = """
+    🎬 Movie Recommendation System - Content-Based Filtering
+    ---------------------------------------------------------
 
----
+    This is a content-based movie recommendation system that suggests movies 
+    similar to the one you like. It uses movie metadata such as genres, cast, 
+    director, tagline, and keywords to find similar titles.
 
-## 🚀 Project Overview
+    ✅ Technologies Used:
+    - Python, Pandas, NumPy
+    - Scikit-learn (TF-IDF Vectorizer, Cosine Similarity)
+    - difflib (for fuzzy matching movie titles)
 
-Content-based recommender systems suggest similar items to a user based on a particular item. In this case, the system takes a movie title as input and recommends similar movies using the textual content of that movie’s metadata.
+    🧠 How it Works:
+    - The system combines selected metadata into a single string.
+    - It uses TF-IDF to convert text into vectors.
+    - Cosine similarity is used to find how similar the movies are.
+    - Based on a user-input movie, the system recommends the top 30 most similar movies.
 
----
+    📁 Dataset:
+    - TMDB 5000 Movie Dataset (4803 movies, 24 columns)
+    - Source: Kaggle (https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
-## 🧠 Key Features
+    Author: Your Name
+    ---------------------------------------------------------
+    """
+    print(description)
 
-- 📄 Processes and cleans movie metadata
-- 🔍 Uses **TF-IDF (Term Frequency-Inverse Document Frequency)** to convert text to numerical features
-- 📏 Calculates **Cosine Similarity** between movies
-- 🔁 Recommends top 30 similar movies to the one entered by the user
-- 🧰 Handles missing values and combines multiple features for better accuracy
 
----
+# Run description when script starts
+if __name__ == "__main__":
+    show_project_description()
 
-## 📂 Dataset Used
-
-- **Name**: [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
-- **Source**: Kaggle / The Movie Database (TMDB)
-- **File**: `movies.csv`
-- **Shape**: 4803 rows × 24 columns
-
-> Dataset contains metadata like genres, cast, director, keywords, overview, popularity, budget, etc.
-
----
-
-## 🛠️ Technologies & Libraries
-
-- **Python**
-- **NumPy**
-- **Pandas**
-- **Scikit-learn**
-  - `TfidfVectorizer`
-  - `cosine_similarity`
-- **difflib** for close matches
-
----
-
-## 📈 How It Works
-
-### 1. Load the Dataset
-```python
-data = pd.read_csv("movies.csv")
